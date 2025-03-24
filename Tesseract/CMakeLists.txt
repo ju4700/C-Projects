@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.20)
+project(Tesseract)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+add_executable(Tesseract main.cpp)
+target_link_libraries(Tesseract ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
